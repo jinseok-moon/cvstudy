@@ -22,7 +22,6 @@
 # MathJax.Hub.Config({
 #     TeX: { equationNumbers: { autoNumber: "AMS" } }
 # });
-#
 
 # +
 import numpy as np
@@ -100,6 +99,7 @@ def cost(y_true, y_predict, length):
 
 cost(y_predict, y_true, len(y_true))
 
+
 # \begin{equation}\label{eqn:eq1}
 # \begin{split}
 # z &= W_2^T h, & {dz \over dW_2}&= h\\[5pt]
@@ -120,6 +120,12 @@ cost(y_predict, y_true, len(y_true))
 #
 #
 #
+
+def GetGradient(x, y, w, learning_rate=0.05, epoch=10000):
+    for epochs in range(epoch):
+        pred = np.dot(w, x)  # y_pred = w1x1 + w2x2
+
+    return w, b
 
 # ## References
 # [<sup id="fn1">1</sup>](#fn1-back) 선형대수와 통계학으로 배우는 머신러닝 with Python. https://github.com/bjpublic/MachineLearning
